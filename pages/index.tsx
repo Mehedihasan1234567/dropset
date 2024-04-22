@@ -8,19 +8,19 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="bg-black text-white ">
+    <main className="bg-black text-white mx-auto ">
       <section>
-        <div>
+        <div className=" sticky top-0">
           <NavBar />
         </div>
       </section>
-      <section className=" text-white px-48 py-6">
-        <div className=" max-w-[1000px]">
-          <h1 className=" font-extrabold text-9xl py-20">
+      <section className=" text-white md:px-48 md:py-6 px-3">
+        <div className=" md:max-w-[1000px] max-w-[400px]">
+          <h1 className=" font-extrabold md:text-9xl text-5xl md:py-20 py-10">
             Serious traking for serious gym workouts.
           </h1>
         </div>
-        <div className="py-6">
+        <div className=" md:py-6 py-2">
           <Image
             src="/gym.svg"
             width={200}
@@ -29,14 +29,14 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="px-48 flex flex-row gap-20 justify-between">
-        <div className=" text-2xl py-40">
-          <p className=" border-b border-gray-700">Workout</p>
-          <p>Body metrics</p>
-          <p>Streak and cooldown</p>
-          <p>Highly customisable</p>
+      <section className="md:px-48 px-4 flex md:flex-row flex-col md:gap-20 justify-between">
+        <div className=" text-xl md:py-40 py-8 hidden md:block">
+          <p className=" border-b border-[#A8A9B2] py-4">Workout</p>
+          <p className=" border-b border-[#A8A9B2] py-4">Body metrics</p>
+          <p className=" border-b border-[#A8A9B2] py-4">Streak and cooldown</p>
+          <p className=" border-b border-[#A8A9B2] py-4">Highly customisable</p>
         </div>
-        <div className="">
+        <div className="py-8">
           <Image
             src="/workouts.png"
             width={400}
@@ -45,24 +45,36 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="px-48 ">
+      <section className="md:px-48 px-4">
         <div className="py-20">
-          <h1 className=" text-[150px] font-extrabold leading-none">
+          <h1 className=" md:text-[150px] text-6xl font-extrabold leading-none">
             Athletic by design.
           </h1>
-          <p className="text-2xl py-5">Made purely for the gym.</p>
+          <p className="text-[32px] py-5 text-[#A8A9B2]">
+            Made purely for the gym.
+          </p>
         </div>
         <div>
           <div className="py-10">
-            <Image
-              src="/Athletic.svg"
-              alt="Athletic-img"
-              width={800}
-              height={500}
-            />
+            <div className="hidden md:block">
+              <Image
+                src="/Athletic.svg"
+                alt="Athletic-img"
+                width={800}
+                height={500}
+              />
+            </div>
+            <div className=" md:hidden block">
+              <Image
+                src="/Athletic-2.svg"
+                alt="Athletic-img"
+                width={800}
+                height={500}
+              />
+            </div>
           </div>
-          <div className="max-w-[700px]">
-            <p className=" text-gray-500 font-medium text-2xl">
+          <div className="md:max-w-[750px] py-9">
+            <p className=" text-[#A8A9B2] text-2xl font-medium md:text-[26px]">
               Hands shaking from working out, using the app from across the
               room, divided attention, bad connection, switching exercises
               on-the-fly, knowing what weights you did the last time - all of it
@@ -71,26 +83,34 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-48 py-12">
-        <div>
-          <h1 className=" text-[150px] font-extrabold leading-none">
+      <section className="md:px-48 md:py-12 pl-4">
+        <div className="py-6">
+          <h1 className=" md:text-[150px] text-6xl font-extrabold leading-none">
             Not just <br /> reps.
           </h1>
         </div>
-        <div className="flex flex-row justify-between">
-          <div className=" py-20 text-2xl font-medium  items-center justify-center">
-            <p>Distance and pace</p>
-            <p>Duration timer</p>
-            <p>Mark-to-complete</p>
-            <p>Intervals</p>
-            <p>Sets and reps</p>
+        <div className="flex flex-row  justify-between relative overflow-hidden">
+          <div className=" text-xl flex flex-col  md:py-40 py-72 w-1/2 gap-3">
+            <p className="border-b border-t border-[#A8A9B2] py-4 ">
+              Distance and pace
+            </p>
+            <p className="border-b border-[#A8A9B2] py-4">Sets and reps</p>
+            <p className="border-b border-[#A8A9B2] py-4">Intervals</p>
+            <p className="border-b border-[#A8A9B2] py-4">Mark-to-complete</p>
+            <p className=" py-4">Duration timer</p>
           </div>
-          <div>
-            <Image src="/reps.png" alt="reps-img" width={400} height={300} />
+          <div className="">
+            <Image
+              src="/reps.png"
+              alt="reps-img"
+              width={420}
+              height={420}
+              className="absolute h-full object-contain left-44"
+            />
           </div>
         </div>
-        <div className="max-w-[700px] py-12">
-          <p className=" text-2xl text-gray-500 font-medium">
+        <div className="max-w-[700px] py-24 px-4">
+          <p className=" text-2xl text-[#A8A9B2] font-medium">
             Wether you’re tracking a classic workout with sets and reps, using
             HIIT interval timers, calisthenics, running a distance, running for
             time or just want a simple list to check things off. Dropset is
@@ -98,16 +118,16 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="px-48">
+      <section className=" md:px-48 px-4 py-4">
         <div>
-          <div className="max-w-[400px]">
-            <h1 className="text-[150px] font-extrabold leading-none">
+          <div className="md:max-w-[400px] md:py-16 py-20">
+            <h1 className=" md:text-9xl text-6xl font-extrabold leading-none">
               Fully featured.
             </h1>
           </div>
-          <div className="py-8">
-            <h3 className="text-8xl font-semibold">Supersets.</h3>
-            <p className=" text-gray-500 text-4xl py-4 font-bold">
+          <div className=" md:py-28">
+            <h3 className="md:text-[80px] text-4xl font-bold">Supersets.</h3>
+            <p className=" text-[#A8A9B2] text-3xl py-4 md:py-8 font-bold">
               contract superdets by links.
             </p>
           </div>
@@ -121,10 +141,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-48 py-20">
+      <section className="md:px-48 md:py-20 px-4 py-4">
         <div>
-          <h1 className="text-8xl font-semibold">Dropsets.</h1>
-          <p className="text-gray-500 text-4xl py-4 font-bold">
+          <h1 className="text-6xl md:text-8xl font-semibold">Dropsets.</h1>
+          <p className="text-[#A8A9B2] text-3xl py-4 font-bold">
             Tags for dropsets, warmup and RPE.
           </p>
         </div>
@@ -137,10 +157,10 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="px-48 py-20">
+      <section className="md:px-48 md:py-20 px-4 py-4">
         <div>
-          <h1 className="text-8xl font-semibold">Notes.</h1>
-          <p className="text-gray-500 text-4xl py-4 font-bold">
+          <h1 className="text-6xl md:text-8xl font-semibold">Notes.</h1>
+          <p className="text-[#A8A9B2] text-4xl py-4 font-bold">
             Both for workouts and exercises.
           </p>
         </div>
@@ -148,10 +168,10 @@ export default function Home() {
           <Image src="/notes.png" alt="notes-img" width={1000} height={300} />
         </div>
       </section>
-      <section className="px-48">
+      <section className="md:px-48 px-4 py-4">
         <div>
-          <h1 className="text-8xl font-semibold">Pace.</h1>
-          <p className="text-gray-500 text-4xl py-4 font-bold">
+          <h1 className="text-6xl md:text-8xl font-semibold">Pace.</h1>
+          <p className="text-[#A8A9B2] text-4xl py-4 font-bold">
             For duration and distance logs.
           </p>
         </div>
@@ -159,12 +179,12 @@ export default function Home() {
           <Image src="/pace.png" alt="pace-img" width={1000} height={300} />
         </div>
       </section>
-      <section className="px-48 py-20">
+      <section className="md:px-48 md:py-20 px-4 py-4">
         <div>
-          <h1 className="text-8xl font-semibold max-w-10">
+          <h1 className="md:text-8xl text-6xl font-semibold max-w-10">
             Flexible scheduling.
           </h1>
-          <p className="text-gray-500 text-4xl py-4 font-bold">
+          <p className="text-[#A8A9B2]  text-4xl py-4 font-bold">
             The foundation of amazing results.
           </p>
         </div>
@@ -174,13 +194,23 @@ export default function Home() {
             alt="schdule-img"
             width={1000}
             height={300}
+            className="hidden md:block"
+          />
+          <Image
+            src="/schdule-2.png"
+            alt="schdule-2-img"
+            width={1000}
+            height={300}
+            className=" block md:hidden"
           />
         </div>
       </section>
-      <section className="px-48 py-20">
+      <section className="md:px-48 md:py-20 px-4 py-4">
         <div className="py-12">
-          <h1 className="text-8xl font-semibold max-w-10">Community.</h1>
-          <p className="text-gray-500 text-4xl py-4 font-bold">
+          <h1 className="md:text-8xl text-6xl font-semibold max-w-10">
+            Community.
+          </h1>
+          <p className="text-[#A8A9B2]  text-4xl py-4 font-bold">
             Connect, gain visibility and share knowledge.
           </p>
         </div>
@@ -193,16 +223,22 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="px-48">
+      <section className="md:px-48 px-4">
         <div>
-          <h1 className="text-7xl font-semibold "> What other people think.</h1>
-          <p className="text-gray-500 text-4xl py-4 font-bold">
+          <h1 className="text-7xl font-semibold max-w-[600px]">
+            What other people think.
+          </h1>
+          <p className="text-[#A8A9B2]  text-4xl py-4 font-bold">
             Reviews from our customers.
           </p>
         </div>
-        <div className=" grid grid-cols-2  justify-between">
+        <div className=" grid md:grid-cols-2 grid-cols-1  justify-between md:gap-14 gap-5 py-5 md:py-32">
           <div className="max-w-[400px]">
-            <div>
+            <div className="flex flex-row text-3xl">
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
               <MdStarRate />
             </div>
             <h5 className="text-2xl py-4 font-semibold">
@@ -217,7 +253,11 @@ export default function Home() {
             <p className="text-[#525359] text-xl py-4">September 2023</p>
           </div>
           <div className="max-w-[400px]">
-            <div>
+            <div className="flex flex-row text-3xl">
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
               <MdStarRate />
             </div>
             <h5 className="text-2xl py-4">Brilliant app and service.</h5>
@@ -234,7 +274,11 @@ export default function Home() {
           </div>
 
           <div className="max-w-[400px]">
-            <div>
+            <div className="flex flex-row text-3xl">
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
               <MdStarRate />
             </div>
             <h5 className="text-2xl py-4">Thank you!</h5>
@@ -250,7 +294,11 @@ export default function Home() {
             <p className="text-[#525359] text-xl py-4">Jul 2023</p>
           </div>
           <div className="max-w-[400px]">
-            <div>
+            <div className="flex flex-row text-3xl">
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
               <MdStarRate />
             </div>
             <h5 className="text-2xl py-4">Best workout tracker.</h5>
@@ -266,7 +314,11 @@ export default function Home() {
             <p className="text-[#525359] text-xl py-4">Jul 2023</p>
           </div>
           <div className="max-w-[400px]">
-            <div>
+            <div className="flex flex-row text-3xl">
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
               <MdStarRate />
             </div>
             <h5 className="text-2xl py-4">Amazed</h5>
@@ -278,7 +330,11 @@ export default function Home() {
             <p className="text-[#525359] text-xl py-4">December 2023</p>
           </div>
           <div className="max-w-[400px]">
-            <div>
+            <div className="flex flex-row text-3xl">
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
+              <MdStarRate />
               <MdStarRate />
             </div>
             <h5 className="text-2xl py-4">
@@ -294,9 +350,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-48 py-10">
-        <div className=" py-20">
-          <h5 className="text-[#E6E6E6] text-[80px] font-bold leading-none">
+      <section className="md:px-48 md:py-10 px-4 py-4">
+        <div className=" md:py-20">
+          <h5 className="text-[#E6E6E6] md:text-[80px] text-5xl font-bold leading-none">
             Jacob <br /> Capablanca on <br /> using Dropset.
           </h5>
           <p className=" py-8 text-3xl font-semibold text-[#A8A9B2]">
@@ -307,15 +363,15 @@ export default function Home() {
           <Image src="/jacob.png" alt="jacob-img" width={1000} height={300} />
         </div>
       </section>
-      <section className="px-48 py-20">
-        <div>
+      <section className="md:px-48 md:py-20 px-4 py-52">
+        <div className="max-w-[750px]">
           <div className="flex flex-row ">
-            <h5 className=" text-[80px] font-bold leading-none">
-              Download from the app Store
+            <h5 className=" md:text-[80px] text-6xl  font-bold leading-none">
+              Download from the app Store.
             </h5>
-            <div className=" ">
-              <button className=" bg-white p-4 rounded-full">
-                <FaArrowDown className="  text-black text-4xl" />
+            <div className="py-6">
+              <button className=" bg-white p-6 rounded-full">
+                <FaArrowDown className="text-black text-4xl" />
               </button>
             </div>
           </div>

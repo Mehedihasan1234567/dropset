@@ -4,8 +4,8 @@ import { TbMenu } from "react-icons/tb";
 
 const NavBar = () => {
   return (
-    <nav className="flex flex-row justify-between px-48 py-3 border-b border-gray-700">
-      <div className="flex flex-row text-center items-center">
+    <nav className="flex flex-row justify-between md:px-48 px-4 py-3 border-b border-gray-500 sticky top-0 ">
+      <div className="flex flex-row text-center items-center ">
         <div>
           <TbMenu className="text-5xl text-center justify-center" />
         </div>

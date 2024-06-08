@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
+
 import NavBar from "@/components/nav-bar";
 import { MdStarRate } from "react-icons/md";
 import { FaArrowDown } from "react-icons/fa";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -30,7 +28,9 @@ export default function Home() {
         </section>
         <section className="py-10 text-white">
           <div className="flex md:flex-row justify-between ">
-            <div className="flex flex-1 flex-col hidden md:block space-y-32 py-32 font-semibold text-xl">
+            <div
+              className={` flex-1 flex-col hidden md:block space-y-32 py-32 font-semibold text-xl`}
+            >
               <p className="border-b border-[#A8A9B2] pb-2">Workout</p>
               <p className="border-b border-[#A8A9B2] pb-2">Body metrics</p>
               <p className="border-b border-[#A8A9B2] pb-2">
@@ -119,10 +119,10 @@ export default function Home() {
           </div>
           <div className="max-w-[700px] py-24 px-4">
             <p className=" text-2xl text-[#A8A9B2] font-medium">
-              Wether you’re tracking a classic workout with sets and reps, using
+              {`Wether you’re tracking a classic workout with sets and reps, using
               HIIT interval timers, calisthenics, running a distance, running
               for time or just want a simple list to check things off. Dropset
-              is flexible enough to support it all.
+              is flexible enough to support it all.`}
             </p>
           </div>
         </section>
@@ -261,10 +261,10 @@ export default function Home() {
                 An elegant and powerful workout tracker.
               </h5>
               <p className="text-[#A8A9B2] text-xl">
-                I’ve used many workout trackers over the years and hoops is by
+                {` I’ve used many workout trackers over the years and hoops is by
                 far the best. It’s seamless, doesn’t get in your way, and the
                 design is so pleasing to work with. Best of all, the devs are
-                responsive and are quick to address any bugs as they come up!
+                responsive and are quick to address any bugs as they come up!`}
               </p>
               <p className="text-[#525359] text-xl py-4">September 2023</p>
             </div>
@@ -323,14 +323,14 @@ export default function Home() {
                 Best workout tracker.
               </h5>
               <p className="text-[#A8A9B2] text-xl">
-                I started working out beginning of this year and was writing all
+                {`I started working out beginning of this year and was writing all
                 my progress down in notebooks and on the notes app on my phone.
                 Had this app pop up as an ad on instagram and I'm so glad I
                 downloaded it. Its so easy to use, so clearly laid out, the team
                 are constantly interacting with people and taking onboard
                 feedback and its great to see. I use this every time I go to the
                 gym and have recommended it to others because I think its so
-                damn good.
+                damn good.`}
               </p>
               <p className="text-[#525359] text-xl py-4">Jul 2023</p>
             </div>
@@ -398,11 +398,11 @@ export default function Home() {
             </div>
             <div>
               <p className="text-[#A8A9B2] text-2xl py-8">
-                Dropset is free to download and try for a few days. After that,
+                {` Dropset is free to download and try for a few days. After that,
                 it’s a $4 per month subscription, or equivalent in your area.
                 Designed by 44 in Stockholm, Sweden. Fine Scandinavian
                 minimalism since 2020. Get in touch with questions or feedback
-                at
+                at`}
                 <u> hello@getdropset.app.</u>
               </p>
               <p className="text-[#A8A9B2] text-2xl">Copyright © 44 · 2024.</p>
